@@ -43,11 +43,11 @@ sap.ui.define([
 			var oSearchField = oEvent.getSource();
 			var sCEP = oSearchField.getValue();
 			// var sUrl = "https://viacep.com.br/ws/" + sCEP + "/json/";
-			var sUrl = `https://viacep.com.br/ws/${sCEP}/json/`; 
+			var sUrl = "https://viacep.com.br/ws/${sCEP}/json/"; 
 			this.getView().getModel().loadData(sUrl);
 			
 			var oViewModel = this.getView().getModel("modeloLocal");
-			oViewModel.setProperty("/state/busy", false);
+			oViewModel.setProperty("/state/busy", false); 
 			
 		}
 	});
